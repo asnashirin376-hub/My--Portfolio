@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asna Shirin E • Python Full-Stack Developer & AI Builder</title>
+  <meta name="description" content="Portfolio of Asna Shirin E, BCA Graduate (2026) and Python Full-Stack Developer specializing in Python, Django, Flutter, React, and AI/ML systems.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Cyber Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="selection:bg-cyan-500 selection:text-black">
+
+  <!-- Interactive Neural Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="scanline-overlay"></div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- =====================================================================
+       1. INTERACTIVE HACKER TERMINAL BOOT SCREEN (Entry Overlay)
+       ===================================================================== -->
+  <div id="terminal-boot-screen">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <div class="terminal-title">ASNA_DEV_OS // NEURAL_BOOT_v2.6</div>
+        <div class="terminal-actions">
+          <button id="terminal-sound-toggle" class="sound-toggle-btn" title="Toggle audio synthesizer beeps">
+            <i data-lucide="volume-2" class="w-3.5 h-3.5"></i> AUDIO: ON
+          </button>
+        </div>
+      </div>
+      
+      <div id="terminal-logs" class="terminal-body">
+        <!-- Log lines streamed via terminal.js -->
+      </div>
+
+      <div class="terminal-footer-action px-6 pb-6">
+        <button id="btn-enter-portfolio" class="enter-btn-glow">
+          <span>ENTER PORTFOLIO</span>
+          <span class="text-xs bg-black/40 px-2 py-0.5 rounded font-mono">↵ RETURN</span>
+        </button>
+
+        <button id="btn-skip-boot" class="skip-btn">
+          ESC // SKIP BOOT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       NAVIGATION BAR
+       ===================================================================== -->
+  <nav class="cyber-nav">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#about" class="brand-logo">
+          <span class="logo-badge">ASNA</span>
+          <span>SHIRIN E</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#about" class="nav-link active">ABOUT</a></li>
+          <li><a href="#skills" class="nav-link">SKILLS</a></li>
+          <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+          <li><a href="#education" class="nav-link">EDUCATION</a></li>
+          <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <div class="nav-cta-group">
+          <button id="btn-nav-terminal" class="nav-terminal-btn" title="Reopen Cyber Terminal">
+            <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">TERMINAL</span>
+          </button>
+
+          <a href="resume/Asna_Shirin_E_Resume.html" class="nav-cv-btn trigger-cv-download">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>CV</span>
+          </a>
+
+          <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =====================================================================
+       2. HERO & ABOUT SECTION (Split Futuristic Developer Profile)
+       ===================================================================== -->
+  <section id="about" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Bio & Core Info -->
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="pulse-indicator"></span>
+            <span>⚡ OPEN TO TRAINEE & ENTRY-LEVEL ROLES</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gradient-text">ASNA SHIRIN E</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span class="code-bracket">&lt;</span>
+            <span>Python Full-Stack Developer</span>
+            <span class="text-muted">•</span>
+            <span>AI & Cross-Platform Builder</span>
+            <span class="text-muted">•</span>
+            <span class="text-purple">BCA '26</span>
+            <span class="code-bracket">/&gt;</span>
+          </div>
+
+          <p class="hero-summary">
+            Motivated BCA graduate seeking a position as a Python Full-Stack Developer where I can apply my programming skills, learn new technologies, and contribute to innovative software solutions. Actively seeking opportunities in software development with strong hands-on experience in academic and personal full-stack projects.
+          </p>
+
+          <!-- Quick Contact & Social Pills -->
+          <div class="contact-pills-row">
+            <span class="contact-pill">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>Malappuram, Kerala</span>
+            </span>
+
+            <a href="tel:+917306122365" class="contact-pill" title="Click to call">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>+91 7306122365</span>
+            </a>
+
+            <a href="mailto:asnashirin736@gmail.com" class="contact-pill" title="Click to compose email">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+              <span>asnashirin736@gmail.com</span>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-pill" title="LinkedIn Profile">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="contact-pill" title="GitHub Repositories">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>github/asnashirin376-hub</span>
+            </a>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-cta-group">
+            <a href="resume/Asna_Shirin_E_Resume.html" class="btn-primary trigger-cv-download">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>DOWNLOAD RESUME</span>
+            </a>
+
+            <a href="#projects" class="btn-secondary">
+              <i data-lucide="code-2" class="w-4 h-4"></i>
+              <span>EXPLORE PROJECTS</span>
+            </a>
+
+            <a href="#contact" class="btn-secondary">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>CONNECT WITH ME</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Holographic Cyber Developer Profile Card -->
+        <div class="hero-visual-wrapper">
+          <div class="cyber-card-outer">
+            
+            <!-- Cyber Floating Tech Chips -->
+            <div class="floating-tech-chip chip-python">
+              <span>🐍</span> Python
+            </div>
+            <div class="floating-tech-chip chip-django">
+              <span>🚀</span> Django
+            </div>
+            <div class="floating-tech-chip chip-flutter">
+              <span>📱</span> Flutter
+            </div>
+            <div class="floating-tech-chip chip-react">
+              <span>⚛️</span> React
+            </div>
+            <div class="floating-tech-chip chip-mysql">
+              <span>🗄️</span> MySQL
+            </div>
+
+            <!-- Avatar Holographic Frame -->
+            <div class="avatar-cyber-container">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-ring-inner"></div>
+              
+              <div class="avatar-img-wrap">
+                <img src="assets/images/asna-profile.jpg" alt="Asna Shirin E - Python Full-Stack Developer">
+              </div>
+
+              <div class="avatar-status-pill">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>ONLINE</span>
+              </div>
+            </div>
+
+            <!-- Card Profile Meta -->
+            <h3 class="profile-card-name">ASNA SHIRIN E</h3>
+            <p class="profile-card-role">Python Full-Stack Developer</p>
+
+            <div class="profile-card-stats">
+              <div class="stat-item">
+                <span class="stat-val">2026</span>
+                <span class="stat-label">BCA GRAD</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">4+</span>
+                <span class="stat-label">PROJECTS</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">100%</span>
+                <span class="stat-label">COMMITTED</span>
+              </div>
+            </div>
+
+            <!-- Profile Card Download CTA -->
+            <a href="resume/Asna_Shirin_E_Resume.html" class="w-full mt-5 py-2.5 px-4 rounded-lg bg-white/5 hover:bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs font-semibold flex items-center justify-center gap-2 transition trigger-cv-download">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>GET DETAILED RESUME (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       3. TECHNICAL SKILLS ARSENAL (Categorized Glowing Bento Grid)
+       ===================================================================== -->
+  <section id="skills" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          <span>STACK & PROFICIENCIES</span>
+        </div>
+        <h2 class="section-title">TECHNICAL SKILLS ARSENAL</h2>
+        <p class="section-subtitle">
+          Engineered with modern full-stack frameworks, multi-paradigm languages, and robust database architectures.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Bento 01: Programming Languages -->
+        <div class="bento-card skills-col-span-7">
+          <div class="skill-card-header">
+            <span class="skill-card-index">01 // LANGUAGES</span>
+            <div class="skill-card-icon">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <h3 class="skill-card-title">PROGRAMMING LANGUAGES</h3>
+          <p class="skill-card-desc">
+            Primary focus on high-efficiency Python scripting, object-oriented software design, dynamic web scripting, and Dart mobile architecture.
+          </p>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill featured">🐍 Python</span>
+            <span class="skill-pill">☕ Java</span>
+            <span class="skill-pill">🐘 PHP</span>
+            <span class="skill-pill">⚡ C</span>
+            <span class="skill-pill">⚙️ C++</span>
+            <span class="skill-pill featured">🌐 JavaScript (ES6+)</span>
+            <span class="skill-pill featured">🎯 Dart</span>
+          </div>
+        </div>
+
+        <!-- Bento 02: Frameworks & Libraries -->
+        <div class="bento-card skills-col-span-5">
+          <div class="skill-card-header">
+            <span class="skill-card-index">02 // FRAMEWORKS</span>
+            <div class="skill-card-icon">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <h3 class="skill-card-title">FRAMEWORKS & LIBRARIES</h3>
+          <p class="skill-card-desc">
+            Scalable backend APIs and responsive component-driven frontends.
+          </p>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill featured">Django</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill featured">React</span>
+            <span class="skill-pill featured">Flutter</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">Laravel</span>
+            <span class="skill-pill">Angular</span>
+          </div>
+        </div>
+
+        <!-- Bento 03: Web Technologies -->
+        <div class="bento-card skills-col-span-4">
+          <div class="skill-card-header">
+            <span class="skill-card-index">03 // WEB TECH</span>
+            <div class="skill-card-icon">
+              <i data-lucide="globe" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <h3 class="skill-card-title">WEB TECHNOLOGIES</h3>
+          <p class="skill-card-desc">
+            Semantic standards, modern UI layouts, and asynchronous REST communication.
+          </p>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill featured">HTML5</span>
+            <span class="skill-pill featured">CSS3</span>
+            <span class="skill-pill featured">RESTful APIs</span>
+            <span class="skill-pill">JSON / AJAX</span>
+          </div>
+        </div>
+
+        <!-- Bento 04: Databases -->
+        <div class="bento-card skills-col-span-4">
+          <div class="skill-card-header">
+            <span class="skill-card-index">04 // DATABASES</span>
+            <div class="skill-card-icon">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <h3 class="skill-card-title">DATABASES</h3>
+          <p class="skill-card-desc">
+            Relational modeling, indexing, schema migrations, and optimized SQL querying.
+          </p>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill featured">PostgreSQL</span>
+            <span class="skill-pill featured">MySQL</span>
+            <span class="skill-pill featured">SQLite</span>
+          </div>
+        </div>
+
+        <!-- Bento 05: Core Concepts & Tools -->
+        <div class="bento-card skills-col-span-4">
+          <div class="skill-card-header">
+            <span class="skill-card-index">05 // TOOLS & CONCEPTS</span>
+            <div class="skill-card-icon">
+              <i data-lucide="wrench" class="w-5 h-5"></i>
+            </div>
+          </div>
+          <h3 class="skill-card-title">CONCEPTS & TOOLS</h3>
+          <p class="skill-card-desc">
+            Engineering fundamentals, version control workflows, and IDE environments.
+          </p>
+          <div class="skill-tags-cloud">
+            <span class="skill-pill featured">OOP Concepts</span>
+            <span class="skill-pill featured">Data Structures</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">PyCharm</span>
+            <span class="skill-pill">Android Studio</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       4. PROJECTS SHOWCASE ("FROM IDEAS TO BUILDS")
+       ===================================================================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      
+      <div class="projects-header-actions">
+        <div class="section-header mb-0">
+          <div class="section-tag">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>PRODUCTION BUILDS & RESEARCH</span>
+          </div>
+          <h2 class="section-title">PROJECTS SHOWCASE</h2>
+          <p class="section-subtitle">
+            From algorithmic prototypes to full-stack, AI-monitored assessment architectures.
+          </p>
+        </div>
+
+        <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>EXPLORE ALL REPOSITORIES ↗</span>
+        </a>
+      </div>
+
+      <!-- FLAGSHIP FEATURED PROJECT: BRAIN-LOCK -->
+      <div class="flagship-card">
+        
+        <!-- Left: Details & Features -->
+        <div>
+          <div class="flagship-badge">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>PROJECT // 01 • FLAGSHIP AI & FULL-STACK SYSTEM</span>
+          </div>
+
+          <h3 class="flagship-title">Brain-Lock – AI-Based Online Examination Platform</h3>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="skill-pill featured">Flutter</span>
+            <span class="skill-pill featured">Django</span>
+            <span class="skill-pill featured">Python</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill featured">AI / OpenCV</span>
+          </div>
+
+          <p class="flagship-desc">
+            Developed a comprehensive Full-Stack Online Examination System with AI-powered malpractice detection operating across both web and mobile platforms.
+          </p>
+
+          <ul class="feature-bullets">
+            <li class="feature-bullet-item">
+              <i data-lucide="check-circle-2" class="bullet-icon w-4 h-4"></i>
+              <span><strong>Real-time Monitoring:</strong> Automated tab-switch detection and window activity tracking to identify unauthorized actions.</span>
+            </li>
+            <li class="feature-bullet-item">
+              <i data-lucide="check-circle-2" class="bullet-icon w-4 h-4"></i>
+              <span><strong>Integrated AI Face Detection:</strong> Continuously verifies user presence and flags absent candidates or multiple faces during exams.</span>
+            </li>
+            <li class="feature-bullet-item">
+              <i data-lucide="check-circle-2" class="bullet-icon w-4 h-4"></i>
+              <span><strong>Unified Cross-Platform Client:</strong> Responsive web portal combined with a smooth Flutter mobile application for universal access.</span>
+            </li>
+            <li class="feature-bullet-item">
+              <i data-lucide="check-circle-2" class="bullet-icon w-4 h-4"></i>
+              <span><strong>Scalable Backend:</strong> Designed with Django REST API architecture and relational persistence for audit logs.</span>
+            </li>
+          </ul>
+
+          <div class="impact-strip">
+            <strong>IMPACT HIGHLIGHTS:</strong> Improved exam integrity through real-time suspicious activity detection, enhanced transparency and reliability in online assessments, and delivered a unified cross-platform solution.
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>View on GitHub ↗</span>
+            </a>
+
+            <button id="btn-arch-brainlock" class="btn-secondary">
+              <i data-lucide="network" class="w-4 h-4"></i>
+              <span>Live Architecture Details</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Terminal Live Telemetry Mockup -->
+        <div class="flagship-right-preview">
+          <div class="terminal-mockup">
+            <div class="mockup-header">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+              <span class="ml-2 font-mono">brain_lock_daemon.py</span>
+            </div>
+            <pre class="overflow-x-auto text-xs leading-relaxed text-emerald-400 font-mono">
+[20:10:15] POST /api/v1/telemetry/session-init
+[20:10:16] Candidate ID: 2026-BCA-0391 [VERIFIED]
+[20:10:18] Neural Face Detector: Active (1 Face Detected)
+[20:10:22] Window State: FULLSCREEN_FOCUSED
+[20:10:45] AI Confidence Score: 99.4% [NORMAL]
+[20:11:02] Anti-Tamper Subsystem: ZERO Flags Detected
+[20:11:15] Heartbeat ACK: Syncing with Django DB...</pre>
+            
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-cyan-300 font-mono">
+              <span class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                PROCTORING ENGINE
+              </span>
+              <span>REST / WEBRTC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3-COLUMN BENTO GRID: PERSONAL & GITHUB PROJECTS -->
+      <div class="projects-grid">
+        
+        <!-- Project 02: Ibaada Daily -->
+        <div class="bento-card project-card">
+          <div class="project-card-top">
+            <div class="project-card-meta">
+              <span class="project-card-tag">PROJECT // 02</span>
+              <i data-lucide="smartphone" class="w-4 h-4 text-cyan-400"></i>
+            </div>
+            <h4 class="project-card-title">Ibaada Daily</h4>
+            <div class="project-card-subtitle">Daily Spiritual & Routine Tracker</div>
+            <p class="project-card-desc">
+              A clean, user-friendly mobile and web application designed to help users track daily prayers, habits, and spiritual routines with smart reminders and visual progress insights.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="skill-pill featured">Flutter</span>
+              <span class="skill-pill featured">Dart</span>
+              <span class="skill-pill">UI/UX</span>
+            </div>
+          </div>
+
+          <div class="project-card-bottom">
+            <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub Repo ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 03: Fat Loss Diet Planner -->
+        <div class="bento-card project-card">
+          <div class="project-card-top">
+            <div class="project-card-meta">
+              <span class="project-card-tag">PROJECT // 03</span>
+              <i data-lucide="activity" class="w-4 h-4 text-purple-400"></i>
+            </div>
+            <h4 class="project-card-title">Fat Loss Diet Planner</h4>
+            <div class="project-card-subtitle">Health & Calorie Calculation System</div>
+            <p class="project-card-desc">
+              An interactive fitness and nutrition planner that calculates daily caloric needs (BMR & TDEE) and generates structured fat-loss meal plans tailored to individual user metrics.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="skill-pill featured">Python</span>
+              <span class="skill-pill featured">JavaScript</span>
+              <span class="skill-pill">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="project-card-bottom">
+            <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub Repo ↗</span>
+            </a>
+
+            <button id="btn-demo-diet" class="interactive-demo-btn">
+              <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+              <span>Live Calc</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 04: Smart Multi-Functional Calculator -->
+        <div class="bento-card project-card">
+          <div class="project-card-top">
+            <div class="project-card-meta">
+              <span class="project-card-tag">PROJECT // 04</span>
+              <i data-lucide="calculator" class="w-4 h-4 text-pink-400"></i>
+            </div>
+            <h4 class="project-card-title">Smart Multi-Functional Calculator</h4>
+            <div class="project-card-subtitle">Precision Arithmetic & Logic Utility</div>
+            <p class="project-card-desc">
+              Responsive utility application engineered with a clean modern UI, robust decimal floating-point precision, and graceful error-handling algorithms.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              <span class="skill-pill featured">JavaScript</span>
+              <span class="skill-pill featured">Dart</span>
+              <span class="skill-pill">CSS3</span>
+            </div>
+          </div>
+
+          <div class="project-card-bottom">
+            <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub Repo ↗</span>
+            </a>
+
+            <button id="btn-demo-calc" class="interactive-demo-btn">
+              <i data-lucide="play" class="w-3.5 h-3.5"></i>
+              <span>Launch Demo</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       5. EDUCATION, CERTIFICATIONS & STRENGTHS (Bento Row)
+       ===================================================================== -->
+  <section id="education" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+          <span>FOUNDATIONS & CREDENTIALS</span>
+        </div>
+        <h2 class="section-title">EDUCATION & CERTIFICATIONS</h2>
+        <p class="section-subtitle">
+          Academic curriculum complemented by modern Machine Learning certification and collaborative soft skills.
+        </p>
+      </div>
+
+      <div class="edu-grid">
+        
+        <!-- Education Card -->
+        <div class="bento-card edu-card edu-col-6">
+          <div>
+            <div class="edu-header-icon">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <span class="skill-card-index">DEGREE PROGRAM // 2023 - 2026</span>
+            <h3 class="skill-card-title mt-2">Bachelor of Computer Applications (BCA)</h3>
+            <p class="text-purple-400 font-mono text-sm font-semibold mb-2">
+              MES Arts and Science College, Chathamangalam
+            </p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Comprehensive coursework encompassing Object-Oriented Software Engineering, Data Structures, Relational Database Management Systems (RDBMS), Operating Systems, and Python Web Programming.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center justify-between">
+            <span class="text-xs font-mono text-gray-400">GRADUATION YEAR</span>
+            <span class="text-cyan-400 font-mono font-bold">2026</span>
+          </div>
+        </div>
+
+        <!-- Certification Card -->
+        <div class="bento-card edu-card edu-col-6">
+          <div>
+            <div class="edu-header-icon">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="skill-card-index">SPECIALIZED CERTIFICATION</span>
+              <span class="verified-badge">
+                <i data-lucide="check-check" class="w-3.5 h-3.5"></i> VERIFIED
+              </span>
+            </div>
+            <h3 class="skill-card-title mt-2">Kickstart Your ML Journey</h3>
+            <p class="text-emerald-400 font-mono text-sm font-semibold mb-2">
+              Issued by Upcode
+            </p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Intensive training in Machine Learning foundations, supervised and unsupervised learning algorithms, feature engineering, and model deployment pipelines using Python data science ecosystems.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-purple-500/20 flex items-center justify-between">
+            <span class="text-xs font-mono text-gray-400">STATUS</span>
+            <span class="text-emerald-400 font-mono text-xs font-bold">CREDENTIAL ACTIVE</span>
+          </div>
+        </div>
+
+        <!-- Core Strengths & Languages (Full Width) -->
+        <div class="bento-card edu-col-12 mt-2">
+          <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+            <h3 class="skill-card-title mb-0">CORE STRENGTHS & LINGUISTIC PROFICIENCY</h3>
+            <span class="text-xs font-mono text-cyan-400">ENGINEERING MINDSET</span>
+          </div>
+          
+          <div class="strengths-list">
+            <div class="strength-item">
+              <i data-lucide="brain-circuit" class="w-5 h-5 text-purple-400"></i>
+              <div>
+                <strong class="text-white block font-display">Problem-Solving & Analytical Thinking</strong>
+                <span class="text-gray-400 text-xs">Methodical approach to debugging complex multi-tier stack issues and optimizing data structures.</span>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <i data-lucide="zap" class="w-5 h-5 text-cyan-400"></i>
+              <div>
+                <strong class="text-white block font-display">Fast Learner in AI & Automation</strong>
+                <span class="text-gray-400 text-xs">Passion for rapidly mastering emerging developer tooling, neural interfaces, and autonomous agent systems.</span>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <i data-lucide="users" class="w-5 h-5 text-emerald-400"></i>
+              <div>
+                <strong class="text-white block font-display">Collaborative & Adaptable</strong>
+                <span class="text-gray-400 text-xs">Thrives in team environments, peer-programming sessions, and fast-paced development sprints.</span>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <i data-lucide="languages" class="w-5 h-5 text-pink-400"></i>
+              <div>
+                <strong class="text-white block font-display">Languages Spoken</strong>
+                <span class="text-gray-400 text-xs"><strong>English</strong> (Professional Working Proficiency) • <strong>Malayalam</strong> (Native / Fluent).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       6. SECURE TUNNEL // INTERACTIVE CONTACT SECTION & FOOTER
+       ===================================================================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="radio" class="w-4 h-4 text-cyan-400 animate-pulse"></i>
+          <span>SECURE COMMUNICATION TUNNEL</span>
+        </div>
+        <h2 class="section-title">LET'S BUILD SOMETHING INNOVATIVE</h2>
+        <p class="section-subtitle">
+          Actively seeking Python Full-Stack Developer, Django, or Software Trainee roles. Reach out directly or transmit a payload below!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left Column: Direct Clickable Action Cards -->
+        <div>
+          <!-- Email Card -->
+          <a href="mailto:asnashirin736@gmail.com" class="contact-action-card">
+            <div class="action-card-icon">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div class="action-card-text">
+              <span class="action-label">DIRECT EMAIL</span>
+              <span class="action-val">asnashirin736@gmail.com</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-auto text-gray-500"></i>
+          </a>
+
+          <!-- Phone Card -->
+          <a href="tel:+917306122365" class="contact-action-card">
+            <div class="action-card-icon">
+              <i data-lucide="phone-call" class="w-5 h-5 text-emerald-400"></i>
+            </div>
+            <div class="action-card-text">
+              <span class="action-label">PHONE / WHATSAPP</span>
+              <span class="action-val">+91 7306122365</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-auto text-gray-500"></i>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-action-card">
+            <div class="action-card-icon">
+              <i data-lucide="linkedin" class="w-5 h-5 text-blue-400"></i>
+            </div>
+            <div class="action-card-text">
+              <span class="action-label">PROFESSIONAL NETWORK</span>
+              <span class="action-val">LinkedIn Profile</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-auto text-gray-500"></i>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="contact-action-card">
+            <div class="action-card-icon">
+              <i data-lucide="github" class="w-5 h-5 text-purple-400"></i>
+            </div>
+            <div class="action-card-text">
+              <span class="action-label">CODE REPOSITORIES</span>
+              <span class="action-val">github.com/asnashirin376-hub</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-auto text-gray-500"></i>
+          </a>
+
+          <!-- Location Card -->
+          <div class="contact-action-card cursor-default">
+            <div class="action-card-icon">
+              <i data-lucide="map-pin" class="w-5 h-5 text-pink-400"></i>
+            </div>
+            <div class="action-card-text">
+              <span class="action-label">CURRENT LOCATION</span>
+              <span class="action-val">Malappuram, Kerala, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Transmit Form -->
+        <div class="bento-card">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-purple-500/20">
+            <div class="font-mono text-xs text-cyan-400 font-semibold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              MESSAGE_PAYLOAD_TRANSMITTER
+            </div>
+            <span class="font-mono text-xs text-gray-500">ENCRYPTION: 256-BIT</span>
+          </div>
+
+          <form id="cyber-contact-form" class="cyber-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">01 // YOUR NAME OR RECRUITER ORG</label>
+              <input id="contact-name" type="text" class="form-input" placeholder="e.g. Alex Morgan / Tech Recruiter" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">02 // YOUR EMAIL ADDRESS</label>
+              <input id="contact-email" type="email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">03 // MESSAGE PAYLOAD / OPPORTUNITY DETAILS</label>
+              <textarea id="contact-message" rows="4" class="form-textarea" placeholder="Hello Asna, we would like to discuss our Python / Full-Stack opening with you..." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-transmit-message" class="btn-transmit">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>TRANSMIT MESSAGE ⚡</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="cyber-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          @ 2026 ASNA SHIRIN E • Malappuram, Kerala • Engineered with Python & Modern Web Technologies.
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/asnashirin376-hub" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+          <a href="mailto:asnashirin736@gmail.com" class="footer-link">Email</a>
+          <a href="#about" class="footer-link">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       MODAL DIALOG (Architecture & Interactive Widgets)
+       ===================================================================== -->
+  <div id="project-modal-backdrop" class="modal-backdrop">
+    <div class="modal-content-card">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title-text">
+          <!-- Populated by JS -->
+        </div>
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+
+  <!-- Modular Scripts -->
+  <script src="assets/js/neural-canvas.js"></script>
+  <script src="assets/js/terminal.js"></script>
+  <script src="assets/js/projects-modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
