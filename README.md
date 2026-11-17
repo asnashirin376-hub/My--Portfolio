@@ -3,7 +3,8 @@
 A modern, interactive, cyber-terminal and dark-mode futuristic personal portfolio website showcasing my technical skills, education, and full-stack development projects.
 
 ## 🌐 Live Demo
-🔗 [View Live Portfolio](https://github.io)
+🔗🔗 [View Live Portfolio](https://github.io)
+
 
 ## 👩‍💻 About Me
 Motivated **BCA Graduate (2026)** from MES Arts and Science College, Chathamangalam, seeking opportunities as a **Python Full-Stack Developer**. Passionate about building scalable web applications, cross-platform mobile apps, and AI-integrated software solutions.
